@@ -9,8 +9,8 @@
 <h4> :computer: Technologies Used </h4>
 <ul>
   <li>:pencil2: Vanilla javaScript </li>
-  <li>:pencil2: pure css </li>
-  <li>:pencil2: html 5 </li>
+  <li>:pencil2: CSS 3 </li>
+  <li>:pencil2: HTML 5 </li>
   <ul>
 <a href="http://broilerfeedguide.000webhostapp.com/"> preview </a>
 
