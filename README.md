@@ -7,6 +7,6 @@
   <li>:pencil2: pure css </li>
   <li>:pencil2: html 5 </li>
   <ul>
-<a href="http://broilerfeedguid.000webhostapp.com/"> preview </a>
+<a href="http://broilerfeedguide.000webhostapp.com/"> preview </a>
 
 
