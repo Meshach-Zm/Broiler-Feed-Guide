@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>Poultry</title>
+</head>
+<body>
+ <div class="container">
+   <div> <form  id="feedForm">
+        <div class="header"><b>Broiler Feed Guide</b> </div>
+        <h3> Enter number of Birds (chicks)</h3>
+        <input type="nob" placeholder="1"  class="nob"  id="nob" required>
+        <button type="submit" class="submit">Calculate</button>
+    </form>
+   </div>
+    <div class="calculator">
+        <div class="novatek">
+             <a href="https://novatekfeeds.com/">
+            <img src="./assets/novapic.jpg" alt="">
+        </a>
+        <h4>starter: day 0 to 14</h4>
+        <h4 id="nova_starter"></h4>
+          <h4> grower: day 15 to 28</h4>
+            <h4 id="nova_grower"></h4>
+        <h4>finisher day: 29 to 42</h4>
+        <h4 id="nova_finisher"></h4>
+        </div>
+        <div class="nutrifeeds"> <h3>
+            <a href="https://nutrifeeds.co.za/">
+                <img src="./assets/nutrifeed.png" alt="">
+            </a>
+        </h3>
+            <h4>starter: day 0 to 18 </h4>
+        <h4 id="nutri_starter"> </h4>
+        <h4>grower: day 19 to 28</h4>
+        <h4 id="nutri_grower"></h4>
+        <h4>finisher day 29 to 42</h4>
+        <h4 id="nutri_finisher"></h4>
+        </div>
+        <div class="pembe"> <h3>
+        <a href="https://www.facebook.com/pembezambia/">
+            <img src="./assets/pmb.jpg" alt="">
+        </a>    
+        </h3>
+        <h4>starter: day 0 to 21</h4>
+        <h4 id="pembe_starter"></h4>
+        <h4>grower: day 22 to 28</h4>
+        <h4 id="pembe_grower"></h4>
+        <h4>finisher: day 29 to 42</h4>
+        <h4 id="pembe_finisher"></h4>
+        </div>
+        <div class="tiger"> <h3>
+            <a href="http://www.tigerfeeds.com/">
+                <img src="./assets/tiger.png" alt="">
+            </a>
+            </h3>
+            <h4>starter: day 0 to 18</h4>
+            <h4 id="tiger_starter" ></h4>
+            <h4>grower: day 19 to 35</h4>
+            <h4 id="tiger_grower"></h4>
+            <h4>finisher: day 36 to 42 </h4>
+            <h4 id="tiger_finisher"></h4>
+        </div>
+    </div>
+  </div>
+  <footer>
+    <h4>
+    Credit:
+  </h4>  <a href="https://www.facebook.com/livestockservicescooperativesociety/">
+    <img src="./assets/cosociety.png" alt="">
+  </a> </footer>
+    <script>
+      let feedForm = document.getElementById("feedForm")
+      feedForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const number_of_birds = document.getElementById("nob").value
+
+        // Tiger feed calculations
+        document.getElementById("tiger_starter").innerHTML=tiger_starter(number_of_birds)
+        document.getElementById("tiger_grower").innerHTML=tiger_grower(number_of_birds)
+        document.getElementById("tiger_finisher").innerHTML=tiger_finisher(number_of_birds)
+
+        // Pembe feed calculations
+        document.getElementById("pembe_starter").innerHTML=pembe_starter(number_of_birds)
+        document.getElementById("pembe_grower").innerHTML=pembe_grower(number_of_birds)
+        document.getElementById("pembe_finisher").innerHTML=pembe_finisher(number_of_birds)
+        
+        
+        // Nutrifeed calculator
+        document.getElementById("nutri_starter").innerHTML=nutri_starter(number_of_birds)
+        document.getElementById("nutri_grower").innerHTML=nutri_grower(number_of_birds)
+        document.getElementById("nutri_finisher").innerHTML=nutri_finisher(number_of_birds)
+       
+        // Novatek Calcultor
+        document.getElementById("nova_starter").innerHTML=nova_starter(number_of_birds)
+        document.getElementById("nova_grower").innerHTML=nova_grower(number_of_birds)
+        document.getElementById("nova_finisher").innerHTML=nova_finisher(number_of_birds)
+
+      })
+        
+   
+   //Tiger Feeds
+   function tiger_starter (number_of_birds) {
+    let n = number_of_birds*0.8
+        return n.toFixed(2) + " Kg"
+     }
+
+     function tiger_grower(number_of_birds) {
+        let n = number_of_birds*1.25
+        return n.toFixed(2) + "Kg"
+     }
+
+     function tiger_finisher(number_of_birds) {
+      let n = number_of_birds * 1.45
+      return  n.toFixed(2) + " Kg"
+     }
+
+    // NOVATEK feeds
+    function nova_starter(number_of_birds) {
+        let n= number_of_birds * 0.56;
+        return n.toFixed(2) + "Kg"
+    }
+
+    function nova_grower(number_of_birds) {
+        let n = number_of_birds * 1.2;
+        return n.toFixed(2) + "Kg"
+    } 
+
+    function nova_finisher(number_of_birds) {
+        let n = number_of_birds * 1.9
+        return n.toFixed(2) + "Kg"
+    }
+
+    // NUTRIFEEDS
+    function nutri_starter(number_of_birds) {
+       let n =  number_of_birds * 0.8
+      return n.toFixed(2) + "Kg"
+    }
+
+    function nutri_grower(number_of_birds) {
+      let n = number_of_birds * 1.2;
+      return n.toFixed(2) + "Kg"
+    }
+
+    function nutri_finisher(number_of_birds) {
+        let n=  number_of_birds * 1.5;
+      return n.toFixed(2) + "Kg"
+    }
+
+    // PEMBE feeds
+
+    function pembe_starter(number_of_birds) {
+     let n = number_of_birds * 0.8;
+        return n.toFixed(2) +"Kg"
+    }
+
+    function pembe_grower(number_of_birds) {
+       let n = number_of_birds * 1.2;
+        return n.toFixed(2) +"Kg"
+    }
+
+    function pembe_finisher(number_of_birds) {
+        let n = number_of_birds * 1.5;
+        return n.toFixed(2) +"Kg"
+    }
+
+    </script>
+</body>
+</html>
