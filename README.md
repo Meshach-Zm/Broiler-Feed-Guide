@@ -4,7 +4,7 @@
 <h4>Features<h4>
   <ul> 
       <li>Links to sites that sell feed</li>
-      <li>Briler to feed ratio calculator</li>
+      <li>Broiler to feed ratio calculator</li>
   </ul>
 <h4> :computer: Technologies Used </h4>
 <ul>
